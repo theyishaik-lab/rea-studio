@@ -1,0 +1,7 @@
+node_modules/
+dist/
+dist-demo/
+.rea-studio/
+samples/build/
+*.log
+.DS_Store

@@ -1,0 +1,29 @@
+{
+  "name": "rea-studio",
+  "version": "0.1.0",
+  "description": "A local web UI for REA (Reverse Engineer Anything): browse REA's tools, run them on your own files, and read the evidence.",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "dev": "node server/index.js --dev",
+    "dev:web": "vite",
+    "build": "vite build",
+    "build:demo": "vite build --mode demo --outDir dist-demo",
+    "start": "vite build && node server/index.js",
+    "serve": "node server/index.js",
+    "record-demo": "node scripts/record-demo.mjs",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/client": "2.3.1",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vite": "^6.3.5"
+  }
+}
