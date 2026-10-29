@@ -23,8 +23,8 @@ function cell(v) {
 }
 
 /** An array of flat objects reads best as a table. */
-export function ObjectTable({ rows }) {
-  const [shown, setShown] = useState(PAGE);
+export function ObjectTable({ rows, initial = PAGE }) {
+  const [shown, setShown] = useState(initial);
   const cols = [...new Set(rows.slice(0, 200).flatMap((r) => Object.keys(r)))].slice(0, 10);
   return (
     <div className="table-wrap">

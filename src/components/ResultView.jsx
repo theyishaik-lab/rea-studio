@@ -36,7 +36,7 @@ function primaryTables(nr) {
       for (const [k2, v2] of Object.entries(v)) if (!skip.has(k2) && isRows(v2)) out.push([`${k} › ${k2}`, v2]);
     }
   }
-  return out.slice(0, 4);
+  return out.slice(0, 3);
 }
 
 function textBlocks(nr) {
@@ -104,7 +104,7 @@ function EvidenceOverview({ ev }) {
       {tables.map(([k, rows]) => (
         <div key={k}>
           <h3><span className="cap">{k.replace(/_/g, " ")}</span> <span className="count">{rows.length}</span></h3>
-          <ObjectTable rows={rows} />
+          <ObjectTable rows={rows} initial={8} />
         </div>
       ))}
 
